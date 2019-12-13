@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
 	pns->init();
 	pns->setRtdSender(ps);
 	pns->setRtdReceiver(pr);
-	pns->setInputFile("C:\\Users\\crackryan\\Desktop\\input.txt");
-	pns->setOutputFile("C:\\Users\\crackryan\\Desktop\\output.txt");
+	pns->setInputFile("C:\\Users\\admin\\Desktop\\code\\network2-rdt\\Windows VS2017\\input.txt");
+	pns->setOutputFile("C:\\Users\\admin\\Desktop\\code\\network2-rdt\\Windows VS2017\\output.txt");
 
 	pns->start();
 
