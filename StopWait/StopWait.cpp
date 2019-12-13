@@ -7,12 +7,41 @@
 #include "RdtReceiver.h"
 #include "StopWaitRdtSender.h"
 #include "StopWaitRdtReceiver.h"
+#include "GBNRdtReceiver.h"
+#include "GBNRdtSender.h"
+#include "SRRdtReceiver.h"
+#include "SRRdtSender.h"
+#include "TCPRdtSender.h"
 
 
 int main(int argc, char* argv[])
 {
-	RdtSender *ps = new StopWaitRdtSender();
-	RdtReceiver * pr = new StopWaitRdtReceiver();
+    RdtSender* ps;
+    RdtReceiver* pr;
+    int choice = 0;
+    switch (choice) {
+    case 0:
+        ps = new StopWaitRdtSender();
+        pr = new StopWaitRdtReceiver();
+        break;
+    case 1:
+        ps = new GBNRdtSender();
+        pr = new GBNRdtReceiver();
+        break;
+    case 2:
+        ps = new SRRdtSender();
+        pr = new SRRdtReceiver();
+        break;
+    case 3:
+        ps = new TCPRdtSender();
+        pr = new GBNRdtReceiver();
+        break;
+    default:
+        ps = new StopWaitRdtSender();
+        pr = new StopWaitRdtReceiver();
+        break;
+
+    }
 //	pns->setRunMode(0);  //VERBOS模式
 	pns->setRunMode(1);  //安静模式
 	pns->init();

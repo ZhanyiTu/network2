@@ -4,6 +4,8 @@ SRRdtReceiver.cpp
 SRRdtSender.cpp
 TCPRdtSender.cpp
 
+StopWait.cpp 主函数入口 设置重传类型
+
 Config.h
 GBNRdtReceiver.h
 GBNRdtSender.h
